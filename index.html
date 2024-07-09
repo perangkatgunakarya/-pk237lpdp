@@ -16,15 +16,16 @@
 </head>
 
 <body>
-  <header class="">
-    <div class="container mx-auto flex justify-between items-center py-2">
+  <header class="absolute w-full p-3 z-40">
+    <div class="lg:w-5/6 mx-auto flex justify-between items-center py-2">
       <!-- Logo -->
       <div>
-        <img src="./assets/logo/logo.svg" class="h-16" alt="">
+        <img src="./assets/logo/mercusuar.png" class="h-24" alt="">
       </div>
 
-      <div>
-        <img src="./assets/logo/lpdp-logo.svg" class="h-16" alt="">
+      <div class="flex gap-6 items-center">
+				<span class="text-sm tracking-wider transition-all duration-700 ease-in sm:text-base">powered by</span>
+        <img src="./assets/logo/lpdp.png" class="h-10" alt="">
       </div>
     </div>
 
@@ -35,17 +36,22 @@
       <div class=" h-full mx-auto">
 
         <div class="relative w-full h-full">
-          <div class="absolute inset-0 w-full-h-full bg-white bg-opacity-50 -z-10"></div>
-          <img src="./assets/img/background.png" alt="" class="absolute -z-20 w-full positio">
-          <div class=" py-20 mx-20 leading-10">
-            <h3 class="text-shadow-hero-lg text-2xl font-extrabold sm:text-3xl md:mb-1 md:text-4xl lg:mb-2 lg:text-9xl">
-              SAIL TO THE <br>SEA OF US<span class="text-red-500">.</span>
+          <!-- <div class="absolute inset-0 w-full-h-full bg-white bg-opacity-50 -z-10"></div> -->
+          <img src="./assets/img/sea.jpg" alt="" class="absolute -z-20 h-full w-full object-cover">
+          <div class="ml-20 leading-10 flex flex-col justify-center h-full relative">
+            <h3 class="text-shadow-hero-lg text-[#30608F] text-2xl font-extrabold sm:text-3xl md:mb-1 md:text-4xl lg:mb-2 lg:text-9xl">
+              SAIL TO THE <br>SEA OF US<img src="./assets/img/wave-icon.png" class="h-12 inline-block" alt="">
             </h3>
+						<img src="/assets/maskot/citra-lakshya.png" class="w-1/2 absolute right-0 -bottom-20 animate-wave" alt="">
           </div>
         </div>
     </section>
     <section class="bg-green-300 h-screen">
 
+    </section>
+
+		<section class="bg-blue-300 h-screen">
+			
     </section>
   </main>
   <footer>
