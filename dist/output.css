@@ -705,6 +705,10 @@ h1,h2,h3 {
   height: 90hv;
 }
 
+.h-\[95vh\] {
+  height: 95vh;
+}
+
 .w-1\/2 {
   width: 50%;
 }
