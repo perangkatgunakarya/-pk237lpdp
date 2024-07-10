@@ -1,195 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PK237 LPDP</title>
+    <link href="dist/output.css" rel="stylesheet" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta
-		name="viewport"
-		content="width=device-width, initial-scale=1.0"
-	/>
-	<title>PK237 LPDP</title>
-	<link
-		href="dist/output.css"
-		rel="stylesheet"
-	/>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+  </head>
 
-	<!-- Font Family -->
-	<link
-		rel="preconnect"
-		href="https://fonts.googleapis.com"
-	>
-	<link
-		rel="preconnect"
-		href="https://fonts.gstatic.com"
-		crossorigin
-	>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-		rel="stylesheet"
-	>
-</head>
+  <body>
+    <header class="absolute w-full p-5 md:p-3 z-40">
+      <div class="md:w-5/6 mx-auto flex justify-between items-center md:py-2">
+        <!-- Logo -->
+        <div>
+          <img src="./assets/logo/mercusuar.png" class="drop-shadow-sm h-12 md:h-24" alt="" />
+        </div>
 
-<body>
-	<header class="absolute w-full p-3 z-40">
-		<div class="lg:w-5/6 mx-auto flex justify-between items-center py-2">
-			<!-- Logo -->
-			<div>
-				<img
-					src="./assets/logo/mercusuar.png"
-					class="h-24"
-					alt=""
-				>
-			</div>
+        <div class="flex gap-6 items-center">
+          <span class="hidden md:inline-block text-sm tracking-wider transition-all duration-700 ease-in sm:text-base">powered by</span>
+          <img src="./assets/logo/lpdp.png" class="drop-shadow-sm h-8 md:h-10" alt="" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="h-screen">
+        <div class=" h-full mx-auto">
+          <div class="relative w-full h-full">
+            <!-- <div class="absolute inset-0 w-full-h-full bg-white bg-opacity-50 -z-10"></div> -->
+            <img src="./assets/img/sea.jpg" alt="" class="absolute -z-20 h-full w-full object-cover" />
+            <div class="mx-6 lg:mr-0 lg:ml-20 overflow-hidden leading-10 flex flex-col py-44 md:py-0 md:justify-center h-full relative">
+              <h3 class="md:w-3/5 text-shadow-hero-lg text-[#30608F] text-7xl font-semibold md:font-extrabold md:mb-1 lg:mb-2 md:text-8xl lg:text-9xl">
+								SAIL TO THE SEA OF US
+								<img src="./assets/img/wave-icon.png" class="h-8 lg:h-12 inline-block" alt="" /></h3>
+              <img src="/assets/maskot/citra-lakshya.png" class="w-3/4 md:w-1/2 absolute -right-10 lg:-right-0 -bottom-5 lg:-bottom-20 animate-wave" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="h-screen">
+        <div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
+          <h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold">SEASCAPED PHILOSOPHY</h2>
+        </div>
+        <div class="flex flex-col lg:flex-row lg:w-10/12 mx-auto lg:pt-12">
+          <div class="flex justify-center lg:w-5/12">
+            <img src="./assets/logo/mercusuar.png" class="h-96 my-12 lg:my-0" alt="" />
+          </div>
+          <div class="px-4 font-medium lg:w-7/12 lg:text-[22px]">
+            <p class="mb-4">Mercusuar dan sinarnya diibaratkan sebagai simbol kekuatan dan harapan bagi setiap peserta PK-237. Ombak di lautan mewakili tantangan dan kesulitan yang harus dihadapi dalam perjuangan menempuh studi dan berkontribusi.</p>
+            <p>Mercusuar akan hadir berdiri tegak dan kokoh di tengah gelapnya lautan dan ganasnya ombak. Mercusuar akan menyinari kapal-kapal di lautan layaknya kekuatan dan harapan pada diri setiap Awardee LPDP PK-237 dalam mewujudkan mimpi-mimpi, yang akan menyinari Indonesia menuju negara maju dan makmur.</p>
+          </div>
+        </div>
+      </section>
 
-			<div class="flex gap-6 items-center">
-				<span class="text-sm tracking-wider transition-all duration-700 ease-in sm:text-base">powered by</span>
-				<img
-					src="./assets/logo/lpdp.png"
-					class="h-10"
-					alt=""
-				>
-			</div>
-		</div>
+      <section class="bg-blue-300 h-screen"></section>
+      <section class="bg-green-400 h-screen">
+        <div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
+          <h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold">TREASURE MAP</h2>
+        </div>
+        <div id="demografi" class="w-full"></div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script>
+      (async () => {
 
+      	const topology = await fetch(
+      		'https://code.highcharts.com/mapdata/countries/id/id-all.topo.json'
+      	).then(response => response.json());
 
-	</header>
-	<main>
-		<section class="h-screen">
-			<div class=" h-full mx-auto">
+      	const data = [
+      		['id-3700', 0], ['id-ac', 2], ['id-ba', 4], ['id-bt', 14], ['id-be', 1],
+      		['id-yo', 24], ['id-jk', 33], ['id-go', 3], ['id-ja', 3], ['id-jr', 49],
+      		['id-jt', 31], ['id-ji', 45], ['id-kb', 3], ['id-ks', 1], ['id-kt', 3],
+      		['id-ki', 1], ['id-kr', 2], ['id-1024', 5], ['id-ma', 10], ['id-la', 2],
+      		['id-nb', 2], ['id-nt', 9], ['id-pa', 7], ['id-ib', 2], ['id-ri', 4],
+      		['id-sr', 1], ['id-se', 15], ['id-st', 1], ['id-sg', 2], ['id-sw', 3],
+      		['id-sb', 6], ['id-sl', 7], ['id-su', 7]
+      	];
 
-				<div class="relative w-full h-full">
-					<!-- <div class="absolute inset-0 w-full-h-full bg-white bg-opacity-50 -z-10"></div> -->
-					<img
-						src="./assets/img/sea.svg"
-						alt=""
-						class="absolute -z-20 h-full w-full object-cover"
-					>
-					<div class="ml-20 leading-10 flex flex-col justify-center h-full relative">
-						<h3
-							class="text-shadow-hero-lg text-[#30608F] text-2xl font-extrabold sm:text-3xl md:mb-1 md:text-4xl lg:mb-2 lg:text-9xl"
-						>
-							SAIL TO THE <br>SEA OF US<img
-								src="./assets/img/wave-icon.png"
-								class="h-12 inline-block"
-								alt=""
-							>
-						</h3>
-						<img
-							src="/assets/maskot/citra-lakshya.png"
-							class="w-1/2 absolute right-0 bottom-0 lg:-bottom-20 animate-wave"
-							alt=""
-						>
-					</div>
-				</div>
-		</section>
-		<section class="h-screen">
-			<div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
-				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold">SEASCAPED PHILOSOPHY</h2>
-			</div>
-			<div class="flex flex-col lg:flex-row lg:w-10/12 mx-auto lg:pt-12">
-				<div class="flex justify-center lg:w-5/12">
-					<img
-						src="./assets/logo/mercusuar.png"
-						class="h-96 my-12 lg:my-0"
-						alt=""
-					>
-				</div>
-				<div class="px-4 font-medium lg:w-7/12 lg:text-[22px]">
-					<p class="mb-4">Mercusuar dan sinarnya diibaratkan sebagai simbol kekuatan dan harapan bagi setiap peserta
-						PK-237. Ombak di lautan mewakili tantangan dan kesulitan yang harus dihadapi dalam perjuangan menempuh studi
-						dan berkontribusi.</p>
-					<p>Mercusuar akan hadir berdiri tegak dan kokoh di tengah gelapnya lautan dan ganasnya ombak. Mercusuar akan
-						menyinari kapal-kapal di lautan layaknya kekuatan dan harapan pada diri setiap Awardee LPDP PK-237 dalam
-						mewujudkan mimpi-mimpi, yang akan menyinari Indonesia menuju negara maju dan makmur.</p>
-				</div>
-			</div>
-		</section>
+      	// Create the chart
+      	Highcharts.mapChart('demografi', {
+      		exporting: { enabled: false },
+      		chart: {
+      			map: topology
+      		},
+      		credits: {
+      			enabled: false
+      		},
+      		legend: {
+      			enabled: false
+      		},
+      		title: {
+      			text: ''
+      		},
+      		subtitle: {
+      			text: ''
+      		},
+      		mapNavigation: {
+      			enabled: false,
+      			buttonOptions: {
+      				verticalAlign: 'bottom'
+      			}
+      		},
+      		colorAxis: {
+      			min: 0,
+      			max: 3,
+      			stops: [
+      				[0, '#FFFFFF'],
+      				[1, '#F0A834'],
+      				// [1, '#D17A00']
+      			]
+      		},
+      		series: [{
+      			data: data,
+      			name: 'Domisili',
+      			// states: {
+      			// 	hover: {
+      			// 		color: '#ffcf82'
+      			// 	}
+      			// },
+      			dataLabels: {
+      				enabled: true,
+      				format: '{point.name}'
+      			}
+      		}]
+      	});
 
-		<section class="bg-blue-300 h-screen">
-
-		</section>
-		<section class="bg-green-400 h-screen">
-			<div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
-				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold">TREASURE MAP</h2>
-			</div>
-			<div
-				id="demografi"
-				class="w-full"
-			></div>
-		</section>
-	</main>
-	<footer>
-
-	</footer>
-	<script src="https://code.highcharts.com/maps/highmaps.js"></script>
-	<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-	<script>
-		(async () => {
-
-			const topology = await fetch(
-				'https://code.highcharts.com/mapdata/countries/id/id-all.topo.json'
-			).then(response => response.json());
-
-			const data = [
-				['id-3700', 0], ['id-ac', 2], ['id-ba', 4], ['id-bt', 14], ['id-be', 1],
-				['id-yo', 24], ['id-jk', 33], ['id-go', 3], ['id-ja', 3], ['id-jr', 49],
-				['id-jt', 31], ['id-ji', 45], ['id-kb', 3], ['id-ks', 1], ['id-kt', 3],
-				['id-ki', 1], ['id-kr', 2], ['id-1024', 5], ['id-ma', 10], ['id-la', 2],
-				['id-nb', 2], ['id-nt', 9], ['id-pa', 7], ['id-ib', 2], ['id-ri', 4],
-				['id-sr', 1], ['id-se', 15], ['id-st', 1], ['id-sg', 2], ['id-sw', 3],
-				['id-sb', 6], ['id-sl', 7], ['id-su', 7]
-			];
-
-			// Create the chart
-			Highcharts.mapChart('demografi', {
-				exporting: { enabled: false },
-				chart: {
-					map: topology
-				},
-				credits: {
-					enabled: false
-				},
-				legend: {
-					enabled: false
-				},
-				title: {
-					text: ''
-				},
-				subtitle: {
-					text: ''
-				},
-				mapNavigation: {
-					enabled: false,
-					buttonOptions: {
-						verticalAlign: 'bottom'
-					}
-				},
-				colorAxis: {
-					min: 0,
-					max: 3,
-					stops: [
-						[0, '#FFFFFF'],
-						[1, '#F0A834'],
-						// [1, '#D17A00']
-					]
-				},
-				series: [{
-					data: data,
-					name: 'Domisili',
-					// states: {
-					// 	hover: {
-					// 		color: '#ffcf82'
-					// 	}
-					// },
-					dataLabels: {
-						enabled: true,
-						format: '{point.name}'
-					}
-				}]
-			});
-
-		})();
-	</script>
-</body>
-
+      })();
+    </script>
+  </body>
 </html>
