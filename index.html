@@ -5,11 +5,13 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>PK237 LPDP</title>
-	<link href="dist/output.css" rel="stylesheet" />
 
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="./dist/vendor/owlcarousel/css/owl.carousel.css">
 	<link rel="stylesheet" href="./dist/vendor/owlcarousel/css/owl.theme.default.css">
+
+	<!-- Main CSS -->
+	<link href="dist/output.css" rel="stylesheet" />
 
 	<!-- Font Family -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,7 +57,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="mb-32">
+		<section class="lg:mb-32">
 			<div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
 				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold uppercase">SEASCAPED
 					PHILOSOPHY</h2>
@@ -103,30 +105,107 @@
 			</div>
 		</section>
 		<section class="h-screen">
-			<div class="h-full w-full">
-				<div class="owl-carousel owl-theme">
-					<div class="item h-40 w-full bg-secondary-light"><h4>1</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>2</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>3</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>4</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>5</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>6</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>7</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>8</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>9</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>10</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>11</h4></div>
-					<div class="item h-40 w-full bg-secondary-light"><h4>12</h4></div>
+			<div class="relative h-full w-full">
+				<div class="absolute h-full w-full -z-10">
+					<img src="./assets/img/deepsea.jpg" alt="" class="object-cover h-full w-full brightness-[.35]">
 				</div>
-				<!-- <img src="./assets/img/deepsea.jpg" alt="" class="object-cover h-full w-full"> -->
+				<div class="p-0 text-white">
+					<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-16 font-bold uppercase">Meet the
+						Sailor</h2>
+				</div>
+				<div class="w-full relative lg:w-8/12 mx-auto">
+					<div class="owl-carousel owl-theme" id="representatives">
+						<div class="item">
+							<img src="./assets/representatives/1.png" alt="" class="h-48 lg:h-96 object-contain">
+							<div class="text-center text-white text-sm lg:text-lg">
+								<span class="block font-semibold">Ketua Angkatan</span>
+								<span class="block">Siwi Mauliddia Handayani</span>
+							</div>
+						</div>
+						<div class="item">
+							<img src="./assets/representatives/2.png" alt="" class="h-48 lg:h-96 object-contain">
+							<div class="text-center text-white text-sm lg:text-lg">
+								<span class="block font-semibold">Koor. Administrasi dan Database</span>
+								<span class="block">Putri Shania Noor</span>
+							</div>
+						</div>
+						<div class="item">
+							<img src="./assets/representatives/3.png" alt="" class="h-48 lg:h-96 object-contain">
+							<div class="text-center text-white text-sm lg:text-lg">
+								<span class="block font-semibold">Koor. Program dan Humas</span>
+								<span class="block">Protasius D. P. B. Isyudanto</span>
+							</div>
+						</div>
+						<div class="item">
+							<img src="./assets/representatives/2.png" alt="" class="h-48 lg:h-96 object-contain">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section class="h-screen">
+			<div class="h-full w-full">
+				<div class="bg-gradient-to-b from-[#00171e] to-black h-full w-full absolute -z-10"></div>
+				<div class="p-0 text-white	">
+					<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold glow">TREASURE MAP</h2>
+				</div>
+				<div id="demografi" class="w-full"></div>
 			</div>
 		</section>
 
-		<section class="h-screen">
+		<section class="lg:mb-32 h-screen">
 			<div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
-				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold">TREASURE MAP</h2>
+				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold uppercase">COMMUNITY
+					GATHERING</h2>
 			</div>
-			<div id="demografi" class="w-full"></div>
+
+			<div class="w-full lg:w-8/12 mx-auto">
+				<div class="owl-carousel owl-theme" id="community">
+					<div class="item">
+						<div class="flex flex-col gap-10 pt-8">
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-32 w-64 rounded-3xl">
+									<img src="./assets/community/1.jpg" alt="" class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-40 w-72 rounded-3xl">
+									<img src="./assets/community/2.jpg" alt="" class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="flex flex-col gap-10 pt-8">
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-32 w-64 -translate-y-12 rounded-3xl">
+									<img src="./assets/community/3.jpg" alt="" class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+							<div class="flex items-center justify-center">
+								<div class="bg-blue-600 h-52 w-52 -translate-y-16 rounded-3xl">
+									<img src="./assets/community/4.jpg" alt="" class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="flex flex-col gap-10 pt-8">
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-52 w-80 translate-y-3 rounded-3xl">
+									<img src="./assets/community/5.png" alt="" class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-32 w-64 rounded-3xl">
+									<img src="./assets/community/6.jpg" alt="" class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer></footer>
@@ -134,10 +213,29 @@
 	<script src="./dist/vendor/jquery/jquery.min.js"></script>
 	<script src="./dist/vendor/owlcarousel/js/owl.carousel.min.js"></script>
 	<script>
-		$('.owl-carousel').owlCarousel({
+		$('#representatives').owlCarousel({
+			center: true,
 			loop: true,
-			margin: 10,
+			margin: 150,
 			nav: true,
+			startPosition: 1,
+			touchDrag: false,
+			mouseDrag: false,
+			navText: ['<button><span></span></button>', '<button><span></span></button>'],
+			responsive: {
+				0: {
+					items: 1
+				},
+				1000: {
+					items: 3
+				}
+			}
+		});
+
+		$('#community').owlCarousel({
+			loop: true,
+			margin: 20,
+			autoWidth: true,
 			responsive: {
 				0: {
 					items: 1
@@ -146,7 +244,7 @@
 					items: 3
 				},
 				1000: {
-					items: 3
+					items: 5
 				}
 			}
 		})
@@ -175,7 +273,8 @@
 				Highcharts.mapChart('demografi', {
 					exporting: { enabled: false },
 					chart: {
-						map: topology
+						map: topology,
+						backgroundColor: 'transparent'
 					},
 					credits: {
 						enabled: false
