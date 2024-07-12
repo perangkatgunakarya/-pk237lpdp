@@ -148,13 +148,26 @@
 
 			</div>
 		</section>
-		<section class="h-screen">
-			<div class="w-full">
-				<div class="bg-gradient-to-b from-[#00171e] to-black h-full w-full absolute -z-10"></div>
+		<section>
+			<div class="w-full bg-gradient-to-b from-[#00171e] to-black">
+				<div class=" h-full w-full absolute -z-10"></div>
 				<div class="p-0 text-white pt-32">
 					<h2 class="text-3xl lg:text-8xl text-center pb-8  lg:pb-12 font-bold glow">TREASURE MAP</h2>
 				</div>
 				<div id="demografi" class="w-full"></div>
+				<div class="flex w-full justify-center items-center py-16">
+					<div class="w-1/2 flex justify-center">
+						<figure class="highcharts-figure">
+							<div class="highcharts-figure-circle"></div>
+							<div id="gender"></div> 
+					</figure>
+					</div>
+					<div class="w-1/2 flex justify-center">
+						<figure class="highcharts-figure">
+							<div id="scholarship"></div>
+					</figure>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -227,6 +240,16 @@
 								source="assets/pdf/Selayang Pandang PK 209.pdf"
 								id="df_manual_book">
 				</div>
+				<div class="mt-10 text-white w-2/3 mx-auto text-center">
+					<p class="text-xl">
+						Bound by dreams and destiny, LPDP awardees weave memories into a luminous legacy of wisdom.
+Each moment, a sparkling gem, reflects the brilliance of a future crafted by intellect and hope, a
+symphony of knowledge and ambition that lights the path to a brighter tomorrow.
+					</p>
+					<div>
+						<img class="mt-5 w-1/2 mx-auto" src="/assets/img/line-yellow.png" alt="">
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -276,6 +299,9 @@
 
 	<script src="https://code.highcharts.com/maps/highmaps.js"></script>
 	<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>	
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script>
 			(async () => {
 
@@ -343,6 +369,160 @@
 				});
 
 			})();
+
+
+
+Highcharts.chart('gender', {
+	exporting: { enabled: false },
+    chart: {
+        type: 'pie',
+				backgroundColor: 'transparent',
+    },
+		credits: {
+						enabled: false
+		},
+    title: {
+        text: 'BY GENDER',
+        style: {
+					color: 'white'
+				}
+    },
+    subtitle: {
+        text: '',
+    },
+
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        },
+        point: {
+            valueSuffix: ''
+        }
+    },
+
+    plotOptions: {
+			pie: {
+				borderColor: '#F0A834',
+				borderWidth: 5,
+			},
+			series: {
+					borderRadius: 0,
+					dataLabels: [{
+							enabled: true,
+							distance: '-30%',
+							style: {
+									fontSize: '0.9em',
+									textOutline: 'none'
+							}
+					}]
+        }
+    },
+
+    tooltip: {
+			headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '{point.name}: {point.y}',
+    },
+
+    series: [
+        {
+            name: 'Gender',
+            colorByPoint: true,
+            data: [
+                {
+                    name: 'Men',
+                    y: 150,
+										color: '#2f9ed8',
+                },
+                {
+                    name: 'Woman',
+                    y: 30,
+										color: '#e14389',
+                },
+            ]
+        }
+    ],
+});
+
+
+Highcharts.chart('scholarship', {
+	exporting: { enabled: false },
+    chart: {
+        type: 'pie',
+				backgroundColor: 'transparent',
+    },
+		credits: {
+						enabled: false
+		},
+    title: {
+        text: 'BY SCHOLARSHIP',
+        style: {
+					color: 'white'
+				}
+    },
+    subtitle: {
+        text: '',
+    },
+
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        },
+        point: {
+            valueSuffix: ''
+        }
+    },
+
+    plotOptions: {
+			pie: {
+				borderColor: '#F0A834',
+				borderWidth: 5,
+			},
+			series: {
+					borderRadius: 0,
+					dataLabels: [{
+							enabled: true,
+							distance: '-30%',
+							style: {
+									fontSize: '0.9em',
+									textOutline: 'none'
+							}
+					}]
+        }
+    },
+
+    tooltip: {
+			headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '{point.name}: {point.y}',
+    },
+
+    series: [
+        {
+            name: 'Scholarship',
+            colorByPoint: true,
+            data: [
+                {
+                    name: 'Master DN',
+                    y: 121,
+                },
+                {
+                    name: 'Doktor DN',
+                    y: 122,
+                },
+								{
+                    name: 'Master LN',
+                    y: 29,
+                },
+                {
+                    name: 'Doktor LN',
+                    y: 30,
+                },
+            ]
+        }
+    ],
+});
+
+
+	
 	</script>
 </body>
 
