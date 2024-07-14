@@ -30,7 +30,7 @@
 		<div class="md:w-5/6 mx-auto flex justify-between items-center md:py-2">
 			<!-- Logo -->
 			<div>
-				<img src="./assets/logo/mercusuar.png" class="drop-shadow-sm h-12 md:h-24" alt="" />
+				<img src="./assets/logo/logo-mercusuar.png" class="drop-shadow-sm h-12 md:h-24" alt="" />
 			</div>
 
 			<div class="flex gap-6 items-center">
@@ -156,8 +156,8 @@
 					<h2 class="text-3xl lg:text-8xl text-center pb-8  lg:pb-12 font-bold glow">TREASURE MAP</h2>
 				</div>
 				<div id="demografi" class="w-full"></div>
-				<div class="flex w-full justify-center items-center py-16">
-					<div class="w-1/2 flex justify-center">
+				<div class="flex flex-col md:flex-row justify-center items-center py-16 overflow-hidden">
+					<div class="w-1/2 flex justify-center pb-4">
 						<figure class="highcharts-figure">
 							<div class="highcharts-figure-circle"></div>
 							<div id="gender"></div>
@@ -172,31 +172,49 @@
 			</div>
 		</section>
 
-		<section class="lg:mb-32 h-screen">
+		<section class="lg:mb-32">
 			<div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
 				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold uppercase">
 					THE IMPRESIVE CREW
 				</h2>
 			</div>
 
-			<div class="text-primary flex justify-center gap-12 font-medium mb-4">
+			<div class="text-primary grid grid-cols-3 md:flex md:justify-center md:gap-12 font-medium mb-4">
 				<div class="hover:brightness-125">
-					<a href="#groupOne">Kelompok 1</a>
+					<a href="#groupOne" class="flex flex-col items-center"> 
+						<span>Kelompok 1</span>
+						<span class="font-semibold">Alugoro</span>
+					</a>
 				</div>
 				<div class="hover:brightness-125">
-					<a href="#groupTwo">Kelompok 2</a>
+					<a href="#groupTwo" class="flex flex-col items-center">
+						<span>Kelompok 2</span>
+						<span class="font-semibold">Ardadedali</span>
+					</a>
 				</div>
 				<div class="hover:brightness-125">
-					<a href="#groupThree">Kelompok 3</a>
+					<a href="#groupThree" class="flex flex-col items-center">
+						<span>Kelompok 3</span>
+						<span class="font-semibold">Halasan</span>
+					</a>
 				</div>
 				<div class="hover:brightness-125">
-					<a href="#groupFour">Kelompok 4</a>
+					<a href="#groupFour" class="flex flex-col items-center">
+						<span>Kelompok 4</span>
+						<span class="font-semibold">Mandau</span>
+					</a>
 				</div>
 				<div class="hover:brightness-125">
-					<a href="#groupFive">Kelompok 5</a>
+					<a href="#groupFive" class="flex flex-col items-center">
+						<span>Kelompok 5</span>
+						<span class="font-semibold">Nagapasa</span>
+					</a>
 				</div>
 				<div class="hover:brightness-125">
-					<a href="#groupSix">Kelompok 6</a>
+					<a href="#groupSix" class="flex flex-col items-center">
+						<span>Kelompok 6</span>
+						<span class="font-semibold">Sampar</span>
+					</a>
 				</div>
 			</div>
 			<div class="w-full lg:w-11/12 mx-auto">
@@ -242,20 +260,20 @@
 				</h2>
 			</div>
 
-			<div class="w-full lg:w-8/12 mx-auto">
+			<div class="w-full lg:w-8/12 mx-auto p-4 md:p-0">
 				<div class="owl-carousel owl-theme" id="community">
 					<div class="item">
 						<div class="flex flex-col gap-10 pt-8">
 							<div class="flex items-center">
 								<div class="bg-blue-600 h-32 w-64 rounded-3xl">
-									<img src="./assets/community/1.jpg" alt=""
+									<img src="./assets/img/kopdar/banyumas.jpg" alt=""
 										class="object-cover rounded-2xl w-full h-full">
 								</div>
 							</div>
 							<div class="flex items-center">
 								<div class="bg-blue-600 h-40 w-72 rounded-3xl">
-									<img src="./assets/community/2.jpg" alt=""
-										class="object-cover rounded-2xl w-full h-full">
+									<img src="./assets/img/kopdar/banyumas2.jpg" alt=""
+										class="object-cover object-top rounded-2xl w-full h-full">
 								</div>
 							</div>
 						</div>
@@ -264,13 +282,13 @@
 						<div class="flex flex-col gap-10 pt-8">
 							<div class="flex items-center">
 								<div class="bg-blue-600 h-32 w-64 -translate-y-12 rounded-3xl">
-									<img src="./assets/community/3.jpg" alt=""
+									<img src="./assets/img/kopdar/bogor.jpg" alt=""
 										class="object-cover rounded-2xl w-full h-full">
 								</div>
 							</div>
 							<div class="flex items-center justify-center">
 								<div class="bg-blue-600 h-52 w-52 -translate-y-16 rounded-3xl">
-									<img src="./assets/community/4.jpg" alt=""
+									<img src="./assets/img/kopdar/depok.jpg" alt=""
 										class="object-cover rounded-2xl w-full h-full">
 								</div>
 							</div>
@@ -280,18 +298,99 @@
 						<div class="flex flex-col gap-10 pt-8">
 							<div class="flex items-center">
 								<div class="bg-blue-600 h-52 w-80 translate-y-3 rounded-3xl">
-									<img src="./assets/community/5.png" alt=""
+									<img src="./assets/img/kopdar/jogja.jpg" alt=""
 										class="object-cover rounded-2xl w-full h-full">
 								</div>
 							</div>
 							<div class="flex items-center">
 								<div class="bg-blue-600 h-32 w-64 rounded-3xl">
-									<img src="./assets/community/6.jpg" alt=""
+									<img src="./assets/img/kopdar/jakpus.jpeg" alt=""
 										class="object-cover rounded-2xl w-full h-full">
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="item">
+						<div class="flex flex-col gap-10 pt-8">
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-32 w-64 rounded-3xl">
+									<img src="./assets/img/kopdar/jakpus2.jpeg" alt=""
+										class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-40 w-72 rounded-3xl">
+									<img src="./assets/img/kopdar/lampung.jpeg" alt=""
+										class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="flex flex-col gap-10 pt-8">
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-32 w-64 -translate-y-12 rounded-3xl">
+									<img src="./assets/img/kopdar/sulut.jpg" alt=""
+										class="object-cover object-center rounded-2xl w-full h-full">
+								</div>
+							</div>
+							<div class="flex items-center justify-center">
+								<div class="bg-blue-600 h-52 w-52 -translate-y-16 rounded-3xl">
+									<img src="./assets/img/kopdar/sumsel.jpeg" alt=""
+										class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="flex flex-col gap-10 pt-8">
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-52 w-80 translate-y-3 rounded-3xl">
+									<img src="./assets/img/kopdar/tangsel2.jpeg" alt=""
+										class="object-cover object-bottom rounded-2xl w-full h-full">
+								</div>
+							</div>
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-32 w-64 rounded-3xl">
+									<img src="./assets/img/kopdar/jabar.jpg" alt=""
+										class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="flex flex-col gap-10 pt-8">
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-32 w-64 -translate-y-12 rounded-3xl">
+									<img src="./assets/img/kopdar/kalbar.jpg" alt=""
+										class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+							<div class="flex items-center justify-center">
+								<div class="bg-blue-600 h-52 w-52 -translate-y-16 rounded-3xl">
+									<img src="./assets/img/kopdar/tangsel.jpeg" alt=""
+										class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="flex flex-col gap-10 pt-8">
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-52 w-80 translate-y-3 rounded-3xl">
+									<img src="./assets/img/kopdar/ntt.jpg" alt=""
+										class="object-cover object-bottom rounded-2xl w-full h-full">
+								</div>
+							</div>
+							<div class="flex items-center">
+								<div class="bg-blue-600 h-32 w-64 rounded-3xl">
+									<img src="./assets/img/kopdar/semarang-raya.jpg" alt=""
+										class="object-cover rounded-2xl w-full h-full">
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</section>
@@ -310,8 +409,8 @@
 				<div class="_df_book !bg-transparent" height="500" webgl="true" scrollWheel="false"
 					source="assets/pdf/Selayang Pandang PK 209.pdf" id="df_manual_book">
 				</div>
-				<div class="mt-10 text-white w-2/3 mx-auto text-center">
-					<p class="text-xl">
+				<div class="mt-10 text-white w-10/12 md:w-2/3 mx-auto text-center">
+					<p class="text-xs sm:text-sm md:text-xl">
 						Bound by dreams and destiny, LPDP awardees weave memories into a luminous legacy of wisdom.
 						Each moment, a sparkling gem, reflects the brilliance of a future crafted by intellect and hope,
 						a
@@ -355,6 +454,8 @@
 		$('#community').owlCarousel({
 			loop: true,
 			margin: 20,
+			nav: false,
+			dots: false,
 			autoWidth: true,
 			responsive: {
 				0: {
@@ -385,7 +486,6 @@
 
 	<script src="https://code.highcharts.com/maps/highmaps.js"></script>
 	<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script>
