@@ -44,5 +44,5 @@
 }
 
 #crew .item .flex div {
-	@apply gap-2
+	@apply gap-2 md:gap-4
 }
