@@ -47,6 +47,13 @@
 	@apply gap-2 md:gap-4
 }
 
+.bg-splashscreen.active {
+	@apply opacity-0
+}
+.splashscreen.active {
+	@apply blur
+}
+
 .crew-button.active {
 	@apply font-bold relative text-primary-light;
   }
