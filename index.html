@@ -185,7 +185,8 @@
 		</section>
 		<section id="representatives" class="h-screen">
 			<div class="relative h-full w-full">
-				<div class="absolute h-full w-full -z-10">
+				<div class="absolute h-full w-full -z-10 overflow-hidden">
+					<img class="absolute w-full z-50 left-40 blur-lg" src="./assets/img/shark.png" alt="">
 					<img class="object-cover h-full w-full brightness-[.35]" src="./assets/img/deepsea.jpg" alt>
 				</div>
 				<div class="p-0 text-white">
@@ -470,16 +471,17 @@
 		</section>
 	</main>
 
-	<section id="booklet" class="pt-10">
-		<div class="relative h-full w-full">
-			<div class="absolute h-full w-full -z-10">
-				<img class="object-cover h-full w-full brightness-[.35]" src="./assets/img/deepsea.jpg" alt>
-			</div>
+	<section id="booklet" class="pt-10 relative pb-40">
+		<div class="absolute h-full w-full -z-10">
+			<img class="absolute w-full z-50 bottom-0 brightness-50" src="./assets/img/seabad.png" alt="">
+			<img class="object-cover h-full bottom-0 w-full brightness-[.15]" src="./assets/img/deepsea.jpg" alt>
+		</div>
+		<div class=" h-full w-full">
 			<div class="p-0 text-white">
 				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-16 font-bold uppercase">Overview</h2>
 			</div>
 
-			<div class="pb-20">
+			<div class="">
 				<div id="df_manual_book" class="_df_book !bg-transparent" height="500" webgl="true" scrollWheel="false" source="assets/pdf/Selayang Pandang PK-237.pdf">
 				</div>
 				<div class="mt-10 text-white w-10/12 md:w-2/3 mx-auto text-center">
