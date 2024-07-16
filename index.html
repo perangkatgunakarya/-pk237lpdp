@@ -46,27 +46,48 @@
 				height: 400px;
 				width: 400px;
 			}
-		}
+		} 
+
+		.sticky {
+    position: fixed;
+    top: 0;
+	background-color: white;
+}
 	</style>
 </head>
 
 <body>
-	<header class="absolute w-full p-5 md:p-3 z-40">
-		<div class="md:w-5/6 mx-auto flex justify-between items-center md:py-2">
+	<header id="main-header" class="absolute w-full p-5 md:p-0 z-40">
+		<div class="w-full md:w-5/6 mx-auto flex justify-between items-center">
 			<!-- Logo -->
 			<div>
 				<img class="drop-shadow-sm h-12 md:h-24" src="./assets/logo/logo-mercusuar.png" alt>
 			</div>
 
-			<div class="flex gap-6 items-center">
-				<span class="hidden md:inline-block text-sm tracking-wider transition-all duration-700 ease-in sm:text-base">powered
-					by</span>
+			<button id="hamburger-button" class="mr-4 flex md:hidden h-6 w-6 flex-col justify-around cursor-pointer active">
+				<span class="block h-[2px] w-full bg-primary-dark transition-all duration-300"></span>
+				<span class="block h-[2px] w-full bg-primary-dark transition-all duration-300"></span>
+				<span class="block h-[2px] w-full bg-primary-dark transition-all duration-300"></span>
+			</button>
+
+			<div id="navbar" class="absolute flex gap-4 bg-white shadow-md drop-shadow-md backdrop-blur-md bg-opacity-50 md:bg-opacity-100 py-4 w-full left-0 items-center flex-col top-20 md:bg-white md:w-auto md:flex md:bg-transparent md:flex-row md:top-auto md:left-auto md:gap-4 text-primary-dark font-semibold">
+				<a class="hover:text-primary" href="#home">Beranda</a>
+				<a class="hover:text-primary" href="#logo">Logo</a>
+				<a class="hover:text-primary" href="#representatives">Perwakilan</a>
+				<a class="hover:text-primary" href="#demographics">Demografi</a>
+				<a class="hover:text-primary" href="#member">Anggota</a>
+				<a class="hover:text-primary" href="#gallery">Galeri</a>
+				<a class="hover:text-primary" href="#booklet">Booklet</a>
+			</div>
+
+			<div class="hidden md:flex gap-6 items-center">
+				<span class="hidden md:inline-block text-sm tracking-wider transition-all duration-700 ease-in sm:text-base">powered by</span>
 				<img class="drop-shadow-sm h-8 md:h-10" src="./assets/logo/lpdp.png" alt>
 			</div>
 		</div>
 	</header>
 	<main>
-		<section class="h-[95vh] sm:h-screen">
+		<section id="home" class="h-[95vh] sm:h-screen">
 			<div class=" h-full mx-auto">
 				<div class="relative w-full h-full">
 					<!-- <div class="absolute inset-0 w-full-h-full bg-white bg-opacity-50 -z-10"></div> -->
@@ -82,9 +103,9 @@
 				</div>
 			</div>
 		</section>
-		<section class="mb-16 lg:mb-32">
+		<section id="logo" class="mb-16 lg:mb-32">
 			<div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
-				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold uppercase">SEASCAPED
+				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-28 lg:pb-8 font-bold uppercase">SEASCAPED
 					PHILOSOPHY</h2>
 			</div>
 			<div class="flex flex-col lg:flex-row lg:w-10/12 mx-auto lg:pt-12">
@@ -131,17 +152,17 @@
 				</div>
 			</div>
 		</section>
-		<section class="h-screen">
+		<section id="representatives" class="h-screen">
 			<div class="relative h-full w-full">
 				<div class="absolute h-full w-full -z-10">
 					<img class="object-cover h-full w-full brightness-[.35]" src="./assets/img/deepsea.jpg" alt>
 				</div>
 				<div class="p-0 text-white">
-					<h2 class="text-3xl lg:text-8xl text-center py-12 lg:py-16 font-bold uppercase">Meet the
+					<h2 class="text-3xl lg:text-8xl text-center py-12 md:pt-28 font-bold uppercase">Meet the
 						Sailor</h2>
 				</div>
 				<div class="w-full h-full flex items-center -translate-y-32 relative lg:w-8/12 mx-auto">
-					<div id="representatives" class="owl-carousel owl-theme">
+					<div id="representative" class="owl-carousel owl-theme">
 						<div class="item">
 							<img class="h-72 lg:h-96 object-contain" src="./assets/representatives/siwi.webp" alt>
 							<div class="text-center text-white text-sm lg:text-lg my-6">
@@ -183,7 +204,7 @@
 			</div>
 		</section>
 		
-		<section>
+		<section id="demographics">
 			<div class="w-full -mt-1 bg-gradient-to-b from-[#00171e] to-black">
 				<div class=" h-full w-full absolute -z-10"></div>
 				<div class="p-0 text-white pt-32">
@@ -213,7 +234,7 @@
 			</div>
 		</section>
 
-		<section class="lg:pb-32 relative overflow-hidden">
+		<section id="member" class="lg:pb-32 relative overflow-hidden">
 			<div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
 				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold uppercase">
 					THE IMPRESIVE CREW
@@ -221,44 +242,41 @@
 			</div>
 			
 			<div class="text-primary grid grid-rows-3 my-4 grid-flow-col gap-4 md:flex md:justify-center md:gap-12 font-medium mb-4">
-				<div class="hover:brightness-125">
-					<a class="flex flex-col items-center" href="#groupOne"> 
-						<span>Kelompok</span>
+				<div class="hover:text-primary-light">
+					<a class="flex flex-col items-center crew-button active active-animation" href="#groupOne"> 
 						<span class="font-semibold">Alugoro</span>
 					</a>
 				</div>
-				<div class="hover:brightness-125">
-					<a class="flex flex-col items-center" href="#groupTwo">
-						<span>Kelompok</span>
+				<div class="hover:text-primary-light">
+					<a class="flex flex-col items-center crew-button" href="#groupTwo">
 						<span class="font-semibold">Ardadedali</span>
 					</a>
 				</div>
-				<div class="hover:brightness-125">
-					<a class="flex flex-col items-center" href="#groupThree">
-						<span>Kelompok</span>
+				<div class="hover:text-primary-light">
+					<a class="flex flex-col items-center crew-button" href="#groupThree">
 						<span class="font-semibold">Halasan</span>
 					</a>
 				</div>
-				<div class="hover:brightness-125">
-					<a class="flex flex-col items-center" href="#groupFour">
-						<span>Kelompok</span>
+				<div class="hover:text-primary-light">
+					<a class="flex flex-col items-center crew-button" href="#groupFour">
 						<span class="font-semibold">Mandau</span>
 					</a>
 				</div>
-				<div class="hover:brightness-125">
-					<a class="flex flex-col items-center" href="#groupFive">
-						<span>Kelompok</span>
+				<div class="hover:text-primary-light">
+					<a class="flex flex-col items-center crew-button" href="#groupFive">
 						<span class="font-semibold">Nagapasa</span>
 					</a>
 				</div>
-				<div class="hover:brightness-125">
-					<a class="flex flex-col items-center" href="#groupSix">
-						<span>Kelompok</span>
+				<div class="hover:text-primary-light">
+					<a class="flex flex-col items-center crew-button" href="#groupSix">
 						<span class="font-semibold">Sampar</span>
 					</a>
 				</div>
 			</div>
 			<div class="w-5/6 lg:w-11/12 mx-auto">
+				<div>
+					<img src alt>
+				</div>
 				<div id="crew" class="owl-carousel owl-theme">
 					<div class="item gap-4" data-hash="groupOne">
 						<div id="group1" class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4 ">
@@ -292,7 +310,7 @@
 			
 		</section>
 
-		<section class="pb-24 lg:pb-44 relative">
+		<section id="gallery" class="pb-24 lg:pb-44 relative">
 			<div class="bg-cover bg-[url('/assets/img/sea.jpg')] bg-bottom text-transparent p-0 [background-clip:text]">
 				<h2 class="text-3xl lg:text-8xl text-center pt-8 lg:pt-16 lg:pb-8 font-bold uppercase">
 					COMMUNITY GATHERING
@@ -421,7 +439,7 @@
 		</section>
 	</main>
 
-	<section>
+	<section id="booklet">
 		<div class="relative h-full w-full">
 			<div class="absolute h-full w-full -z-10">
 				<img class="object-cover h-full w-full brightness-[.35]" src="./assets/img/deepsea.jpg" alt>
@@ -456,7 +474,32 @@
 	<script src="./dist/vendor/owlcarousel/js/owl.carousel.min.js"></script>
 	<script src="./assets/vendor/dflip/js/dflip.min.js" type="text/javascript"></script>
 	<script>
-		$('#representatives').owlCarousel({
+		var hamburger = document.getElementById('hamburger-button');
+		var navbar = document.getElementById('navbar');
+
+		hamburger.addEventListener('click', function() {
+			if (navbar.classList.contains('flex')) {
+				navbar.classList.remove('flex');
+				navbar.classList.add('hidden')
+			} else {
+				navbar.classList.add('flex');
+				navbar.classList.remove('hidden')
+			}
+		});
+
+
+		window.addEventListener('scroll', function() {
+			var header = document.getElementById('main-header');
+			if (window.scrollY > 0) {
+				header.classList.remove('absolute');
+				header.classList.add('sticky');
+			} else {
+				header.classList.remove('sticky');
+				header.classList.add('absolute');
+			}
+		});
+
+		$('#representative').owlCarousel({
 			center: true,
 			loop: true,
 			margin: 150,
@@ -494,6 +537,20 @@
 			}
 		})
 
+		document.addEventListener('DOMContentLoaded', function() {
+			const links = document.querySelectorAll('.crew-button');
+
+			links.forEach(link => {
+				link.addEventListener('click', function() {
+					// Hapus kelas aktif dari semua link
+					links.forEach(l => l.classList.remove('active'));
+
+					// Tambahkan kelas aktif ke link yang diklik
+					this.classList.add('active');
+				});
+			});
+		});
+
 		$('#crew').owlCarousel({
 			margin: 20,
 			nav: false,
@@ -508,6 +565,17 @@
 				},
 			}
 		})
+
+		document.addEventListener("DOMContentLoaded", function() {
+			const buttons = document.querySelectorAll('.crew-button');
+
+			buttons.forEach(button => {
+			button.addEventListener('click', function() {
+				buttons.forEach(btn => btn.classList.remove('active', 'active-animation'));
+				this.classList.add('active', 'active-animation');
+			});
+			});
+		});
 	</script>
 
 	<script src="https://code.highcharts.com/maps/highmaps.js"></script>

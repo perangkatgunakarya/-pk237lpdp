@@ -46,3 +46,32 @@
 #crew .item .flex div {
 	@apply gap-2 md:gap-4
 }
+
+.crew-button.active {
+	@apply font-bold relative text-primary-light;
+  }
+  
+  .crew-button.active::after {
+	@apply border-b-2 border-b-primary-light;
+	content: '';
+	width: 0;
+	transition: width 1s ease-in-out;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  }
+  
+  .crew-button.active.active-animation::after {
+	width: 100%;
+  }
+  
+  /* Mengaktifkan animasi saat elemen menjadi aktif */
+  .crew-button.active.active-animation {
+	animation: activateAnimation 1s forwards;
+  }
+  
+  @keyframes activateAnimation {
+	from { width: 0; }
+	to { width: 100%; }
+  }
