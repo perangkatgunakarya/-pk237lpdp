@@ -46,3 +46,10 @@
 #crew .item .flex div {
 	@apply gap-2 md:gap-4
 }
+
+.bg-splashscreen.active {
+	@apply opacity-0
+}
+.splashscreen.active {
+	@apply blur
+}

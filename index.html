@@ -22,6 +22,9 @@
 	<link type="text/css" href="assets/vendor/dflip/css/themify-icons.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+
+	<!-- script load for animejs -->
+	<script src="./assets/js/anime.min.js"></script>
 	<style>
 		#gender, #scholarship {
 			display: block;
@@ -51,6 +54,34 @@
 </head>
 
 <body>
+	<!-- LOAD ANIMATION START -->
+	<div class="start-animation-bg fixed z-[100] h-full w-full bg-neutral-50">
+		<!-- proudly-present-state -->
+		<div
+			class="proudly-present-container flex h-full w-full items-center opacity-0 relative"
+		>
+
+			<div class="bg-splashscreen active opacity-100 mx-auto overflow-hidden transition-all duration-700 ease-in-out">
+				<div class="splashscreen active blur-none flex flex-col md:flex-row gap-4 md:gap-6 items-center transition-all ease-in-out duration-[1.5s] justify-center">
+					<img class="relative left-0 proudly-present-logo active w-28 md:w-40 md:pr-12" src="./assets/logo/mercusuar.png" alt="">
+					<div class="spashscreen-line transition-all duration-700 ease-in ">
+						<img class="h-[300px] hidden md:inline-block" src="./assets/img/line-horizontal.png" alt="">
+					</div>
+					<div class="md:pl-12">
+						<span class="block text-center md:text-left font-bold text-lg md:text-5xl">MERCUSUAR</span>
+						<span class="md:text-xl">Angkatan PK-237 LPDP</span>
+					</div>
+					<!-- <img class="spashscreen-logo-name w-1/3 transition-all duration-[1.5s]" src="./assets/logo/logo-name.png" alt=""> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div
+		class="light-bg fixed z-[75] h-full w-full bg-white transition-all duration-300"
+	></div>
+	<!-- LOAD ANIMATION END -->
+
+
 	<header class="absolute w-full p-5 md:p-3 z-40">
 		<div class="md:w-5/6 mx-auto flex justify-between items-center md:py-2">
 			<!-- Logo -->
@@ -431,7 +462,7 @@
 			</div>
 
 			<div class="pb-20">
-				<div id="df_manual_book" class="_df_book !bg-transparent" height="500" webgl="true" scrollWheel="false" source="assets/pdf/Selayang Pandang PK 209.pdf">
+				<div id="df_manual_book" class="_df_book !bg-transparent" height="500" webgl="true" scrollWheel="false" source="assets/pdf/Selayang Pandang PK-237.pdf">
 				</div>
 				<div class="mt-10 text-white w-10/12 md:w-2/3 mx-auto text-center">
 					<p class="text-xs sm:text-sm md:text-xl">
@@ -514,6 +545,15 @@
 	<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="./assets/js/splashscreen.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        mirror: false,
+        once: true,
+        duration: 500,
+      });
+    </script>
 	<script>
 			(async () => {
 
