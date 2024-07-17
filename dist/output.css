@@ -634,16 +634,16 @@ h1,h2,h3 {
   z-index: 50;
 }
 
-.z-\[100\] {
-  z-index: 100;
-}
-
 .z-\[75\] {
   z-index: 75;
 }
 
-.z-\[999999\] {
-  z-index: 999999;
+.z-\[99999\] {
+  z-index: 99999;
+}
+
+.z-\[9999\] {
+  z-index: 9999;
 }
 
 .mx-6 {
@@ -962,11 +962,6 @@ h1,h2,h3 {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1049,6 +1044,11 @@ h1,h2,h3 {
   padding-bottom: 3rem;
 }
 
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1057,11 +1057,6 @@ h1,h2,h3 {
 .py-44 {
   padding-top: 11rem;
   padding-bottom: 11rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .pb-12 {
