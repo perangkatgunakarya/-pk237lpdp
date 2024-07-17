@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html class="scroll-smooth" lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PK237 LPDP</title>
+
+	<!-- Favicon -->
+	<link href="favicon.png" rel="icon" sizes="22x32">
+
 
 	<!-- Owl Carousel -->
 	<link href="./dist/vendor/owlcarousel/css/owl.carousel.css" rel="stylesheet">
@@ -20,71 +24,77 @@
 	<!-- Flipbook StyleSheet -->
 	<link type="text/css" href="assets/vendor/dflip/css/dflip.min.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/dflip/css/themify-icons.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
 
 
 	<!-- script load for animejs -->
 	<script src="./assets/js/anime.min.js"></script>
 	<style>
-		#gender, #scholarship {
-			display: block;
-			background-color: #d9d9d9;
-			border: 15px solid #f0a834;
-			height: 250px;
-			width: 250px;
-			border-radius: 100%;
-			padding: 0;
-			margin: 0;
-		}
-
-		@media (min-width: 768px) {
-			#gender, #scholarship {
-				height: 300px;
-				width: 300px;
-			}
-		}
-
-		@media (min-width: 1024px) {
-			#gender, #scholarship {
-				height: 400px;
-				width: 400px;
-			}
-		} 
-
 		.sticky {
-    position: fixed;
-    top: 0;
-	background-color: white;
-}
+			position: fixed;
+			top: 0;
+			background-color: white;
+		}
+
+		#gender,
+		#scholarship {
+			position: relative;
+			width: 350px;
+			height: 350px;
+		}
+
+		@media only screen and (max-width: 640px) {
+
+			#gender,
+			#scholarship {
+				position: relative;
+				width: 300px;
+				height: 300px;
+			}
+		}
+
+		#gender::before,
+		#scholarship::before {
+			content: '';
+			z-index: -10;
+			position: absolute;
+			z-index: 0;
+			top: -20px;
+			border-radius: 100%;
+			display: block;
+			width: 100%;
+			height: 100%;
+			border: 10px solid #F0A834;
+			background-color: white;
+		}
 	</style>
 </head>
 
 <body>
 	<!-- LOAD ANIMATION START -->
-	<div class="start-animation-bg fixed z-[100] h-full w-full bg-neutral-50">
-		<!-- proudly-present-state -->
-		<div
-			class="proudly-present-container flex h-full w-full items-center opacity-0 relative"
-		>
+	<!-- <div class="start-animation-bg fixed z-[100] h-full w-full bg-neutral-50">
+		<div class="proudly-present-container flex h-full w-full items-center opacity-0 relative">
 
-			<div class="bg-splashscreen active opacity-100 mx-auto overflow-hidden transition-all duration-700 ease-in-out">
-				<div class="splashscreen active blur-none flex flex-col md:flex-row gap-4 md:gap-6 items-center transition-all ease-in-out duration-[1.5s] justify-center">
-					<img class="relative left-0 proudly-present-logo active w-28 md:w-40 md:pr-12" src="./assets/logo/mercusuar.png" alt="">
+			<div
+				class="bg-splashscreen active opacity-100 mx-auto overflow-hidden transition-all duration-700 ease-in-out">
+				<div
+					class="splashscreen active blur-none flex flex-col md:flex-row gap-4 md:gap-6 items-center transition-all ease-in-out duration-[1.5s] justify-center">
+					<img class="relative left-0 proudly-present-logo active w-28 md:w-40 md:pr-12"
+						src="./assets/logo/mercusuar.png" alt>
 					<div class="spashscreen-line transition-all duration-700 ease-in ">
-						<img class="h-[300px] hidden md:inline-block" src="./assets/img/line-horizontal.png" alt="">
+						<img class="h-[300px] hidden md:inline-block" src="./assets/img/line-horizontal.png" alt>
 					</div>
 					<div class="md:pl-12">
 						<span class="block text-center md:text-left font-bold text-lg md:text-5xl">MERCUSUAR</span>
 						<span class="md:text-xl">Angkatan PK-237 LPDP</span>
 					</div>
-					<!-- <img class="spashscreen-logo-name w-1/3 transition-all duration-[1.5s]" src="./assets/logo/logo-name.png" alt=""> -->
 				</div>
 			</div>
 		</div>
 	</div>
-	<div
-		class="light-bg fixed z-[75] h-full w-full bg-white transition-all duration-300"
-	></div>
+	<div class="light-bg fixed z-[75] h-full w-full bg-white transition-all duration-300"></div> -->
 	<!-- LOAD ANIMATION END -->
 
 
@@ -95,13 +105,15 @@
 				<img class="drop-shadow-sm h-12 md:h-24" src="./assets/logo/logo-mercusuar.png" alt>
 			</div>
 
-			<button id="hamburger-button" class="mr-4 flex md:hidden h-6 w-6 flex-col justify-around cursor-pointer active">
+			<button id="hamburger-button"
+				class="mr-4 flex md:hidden h-6 w-6 flex-col justify-around cursor-pointer active">
 				<span class="block h-[2px] w-full bg-primary-dark transition-all duration-300"></span>
 				<span class="block h-[2px] w-full bg-primary-dark transition-all duration-300"></span>
 				<span class="block h-[2px] w-full bg-primary-dark transition-all duration-300"></span>
 			</button>
 
-			<div id="navbar" class="absolute hidden gap-4 bg-white shadow-md drop-shadow-md backdrop-blur-md bg-opacity-50 md:bg-opacity-100 py-4 w-full left-0 items-center flex-col md:backdrop-blur-none md:static md:shadow-none md:drop-shadow-none top-20 md:w-auto md:flex md:bg-transparent md:flex-row md:top-auto md:left-auto md:gap-4 text-primary-dark font-semibold">
+			<div id="navbar"
+				class="absolute hidden gap-4 bg-white shadow-md drop-shadow-md backdrop-blur-md bg-opacity-50 md:bg-opacity-100 py-4 w-full left-0 items-center flex-col md:backdrop-blur-none md:static md:shadow-none md:drop-shadow-none top-20 md:w-auto md:flex md:bg-transparent md:flex-row md:top-auto md:left-auto md:gap-4 text-primary-dark font-semibold">
 				<a class="hover:text-primary" href="#home">Beranda</a>
 				<a class="hover:text-primary" href="#logo">Logo</a>
 				<a class="hover:text-primary" href="#representatives">Perwakilan</a>
@@ -112,7 +124,9 @@
 			</div>
 
 			<div class="hidden md:flex gap-6 items-center">
-				<span class="hidden md:inline-block text-sm tracking-wider transition-all duration-700 ease-in sm:text-base">powered by</span>
+				<span
+					class="hidden md:inline-block text-sm tracking-wider transition-all duration-700 ease-in sm:text-base">powered
+					by</span>
 				<img class="drop-shadow-sm h-8 md:h-10" src="./assets/logo/lpdp.png" alt>
 			</div>
 		</div>
@@ -123,13 +137,16 @@
 				<div class="relative w-full h-full">
 					<!-- <div class="absolute inset-0 w-full-h-full bg-white bg-opacity-50 -z-10"></div> -->
 					<img class="absolute -z-20 h-full w-full object-cover" src="./assets/img/sea.jpg" alt>
-					<div class="mx-6 lg:mr-0 lg:ml-20 overflow-hidden leading-10 flex flex-col py-44 md:py-0 md:justify-center h-full relative">
-						<h3 class="md:w-[45%] text-shadow-hero-lg text-[#30608F] text-5xl font-semibold md:font-extrabold md:mb-1 lg:mb-2 md:text-7xl lg:text-7xl">
+					<div
+						class="mx-6 lg:mr-0 lg:ml-20 overflow-hidden leading-10 flex flex-col py-44 md:py-0 md:justify-center h-full relative">
+						<h3
+							class="md:w-[45%] text-shadow-hero-lg text-[#30608F] text-5xl font-semibold md:font-extrabold md:mb-1 lg:mb-2 md:text-7xl lg:text-7xl">
 							NYALA MIMPI INDONESIA, <br>
 							PANCARMU TERANGI DUNIA
 							<img class="h-8 lg:h-12 inline-block" src="./assets/img/wave-icon.png" alt>
 						</h3>
-						<img class="w-3/4 md:w-1/2 absolute -right-10 lg:-right-0 -bottom-5 lg:-bottom-20 animate-wave" src="/assets/maskot/citra-lakshya_1.png" alt>
+						<img class="w-3/4 md:w-1/2 absolute -right-10 lg:-right-0 -bottom-5 lg:-bottom-20 animate-wave"
+							src="/assets/maskot/citra-lakshya_1.png" alt>
 					</div>
 				</div>
 			</div>
@@ -144,7 +161,8 @@
 					<img class="h-60 lg:h-96 my-12 lg:my-0" src="./assets/logo/mercusuar.png" alt>
 				</div>
 				<div class="px-4 font-medium lg:w-7/12 lg:text-[22px]">
-					<p class="mb-4"><span class="text-primary font-bold text-lg lg:text-3xl">Mercusuar</span> dan <span class="text-secondary-dark font-bold text-lg lg:text-3xl">sinarnya</span> diibaratkan
+					<p class="mb-4"><span class="text-primary font-bold text-lg lg:text-3xl">Mercusuar</span> dan <span
+							class="text-secondary-dark font-bold text-lg lg:text-3xl">sinarnya</span> diibaratkan
 						sebagai simbol kekuatan dan harapan bagi setiap
 						peserta PK-237. Ombak di lautan mewakili tantangan dan kesulitan yang harus dihadapi dalam
 						perjuangan menempuh studi dan berkontribusi.</p>
@@ -162,7 +180,8 @@
 			</div>
 			<div class="flex flex-col lg:flex-row lg:w-10/12 mx-auto lg:pt-12">
 				<div class="lg:order-2 hidden md:flex justify-center lg:w-5/12">
-					<img class="h-72 lg:h-[30rem] lg:-translate-y-10 my-6 lg:my-0" src="./assets/maskot/citra-lakshya_2.png" alt>
+					<img class="h-72 lg:h-[30rem] lg:-translate-y-10 my-6 lg:my-0"
+						src="./assets/maskot/citra-lakshya_2.png" alt>
 				</div>
 				<div class="lg:order-1 px-4 lg:px-0 font-medium mt-6 lg:w-7/12 lg:text-[22px] lg:text-right">
 					<p class="md:mb-4">
@@ -186,7 +205,7 @@
 		<section id="representatives" class="h-screen">
 			<div class="relative h-full w-full">
 				<div class="absolute h-full w-full -z-10 overflow-hidden">
-					<img class="absolute w-full z-50 left-40 blur-lg" src="./assets/img/shark.png" alt="">
+					<img class="absolute w-full z-50 left-40 blur-lg" src="./assets/img/shark.png" alt>
 					<img class="object-cover h-full w-full brightness-[.35]" src="./assets/img/deepsea.jpg" alt>
 				</div>
 				<div class="p-0 text-white">
@@ -235,32 +254,32 @@
 
 			</div>
 		</section>
-		
+
 		<section id="demographics">
-			<div class="w-full -mt-1 bg-gradient-to-b from-[#00171e] to-black">
+			<div class="w-full -mt-1 pb-12 bg-gradient-to-b from-[#00171e] to-black">
 				<div class=" h-full w-full absolute -z-10"></div>
 				<div class="p-0 text-white pt-32">
-					<h2 class="text-3xl lg:text-8xl text-center pb-2  lg:pb-4 font-bold glow">TREASURE MAP</h2>
+					<h2 class="text-3xl lg:text-8xl text-center pb-2  lg:pb-4 font-bold glow uppercase">Treasure Map</h2>
 					<div>
 						<img class="w-1/2 mx-auto" src="/assets/img/line-yellow.png" alt>
 					</div>
 				</div>
 				<div class="mt-4 mb-8 text-white w-10/12 md:w-2/3 mx-auto text-center">
 					<p class="text-xs sm:text-sm md:text-lg">
-						Unveiling Indonesia's enchanted map, this section reveals the luminous origins of LPDP awardees, with each province sparkling with the count of scholars, weaving a magical tapestry of knowledge.
+						Unveiling Indonesia's enchanted map, this section reveals the luminous origins of LPDP awardees,
+						with each province sparkling with the count of scholars, weaving a magical tapestry of
+						knowledge.
 					</p>
 				</div>
 				<div id="demografi" class="w-full"></div>
-				<div class="flex flex-col md:flex-row justify-center items-center py-16 overflow-hidden">
-					<div class="w-1/2 flex justify-center pb-16 lg:pb-0">
-						<figure class="highcharts-figure">
-							<div id="gender"></div>
-						</figure>
+				<div class="flex flex-col md:flex-row items-center mt-16 md:mt-32 gap-8 md:gap-0">
+					<div class="w-10/12 md:w-1/2 flex flex-col items-center">
+						<h3 class="text-white font-bold mb-8 text-2xl text-center">Jenis Kelamin</h3>
+						<div id="gender" class=""></div>
 					</div>
-					<div class="w-1/2 flex justify-center">
-						<figure class="highcharts-figure">
-							<div id="scholarship"></div>
-						</figure>
+					<div class="w-10/12 md:w-1/2 flex flex-col items-center">
+						<h3 class="text-white font-bold mb-8 text-2xl text-center">Beasiswa</h3>
+						<div id="scholarship"></div>
 					</div>
 				</div>
 			</div>
@@ -272,10 +291,11 @@
 					THE IMPRESIVE CREW
 				</h2>
 			</div>
-			
-			<div class="text-primary grid grid-rows-3 my-4 grid-flow-col gap-4 md:flex md:justify-center md:gap-12 font-medium mb-4">
+
+			<div
+				class="text-primary grid grid-rows-3 my-4 grid-flow-col gap-4 md:flex md:justify-center md:gap-12 font-medium mb-4">
 				<div class="hover:text-primary-light">
-					<a class="flex flex-col items-center crew-button active active-animation" href="#groupOne"> 
+					<a class="flex flex-col items-center crew-button active active-animation" href="#groupOne">
 						<span class="font-semibold">Alugoro</span>
 					</a>
 				</div>
@@ -311,35 +331,42 @@
 				</div>
 				<div id="crew" class="owl-carousel owl-theme">
 					<div class="item gap-4" data-hash="groupOne">
-						<div id="group1" class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4 ">
+						<div id="group1"
+							class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4 ">
 						</div>
 					</div>
 					<div class="item" data-hash="groupTwo">
-						<div id="group2" class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
+						<div id="group2"
+							class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
 						</div>
 					</div>
 					<div class="item" data-hash="groupThree">
-						<div id="group3" class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
+						<div id="group3"
+							class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
 						</div>
 					</div>
 					<div class="item" data-hash="groupFour">
-						<div id="group4" class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
+						<div id="group4"
+							class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
 						</div>
 					</div>
 					<div class="item" data-hash="groupFive">
-						<div id="group5" class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
+						<div id="group5"
+							class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
 						</div>
 					</div>
 					<div class="item" data-hash="groupSix">
-						<div id="group6" class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
+						<div id="group6"
+							class="bg-primary bg-opacity-50 flex flex-wrap justify-center gap-4 rounded-2xl text-center p-4">
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<img class="absolute w-1/3 md:w-1/5 right-0 translate-x-1/3  bottom-0 z-20" src="./assets/maskot/citra.png" alt>
+			<img class="absolute w-1/3 md:w-1/5 right-0 translate-x-1/3  bottom-0 z-20" src="./assets/maskot/citra.png"
+				alt>
 
-			
+
 		</section>
 
 		<section id="gallery" class="pb-24 lg:pb-44 relative pt-10">
@@ -358,12 +385,14 @@
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
 								<div class="md:h-32 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-right md:object-center rounded-2xl w-full h-full" src="./assets/img/kopdar/banyumas.jpg" alt>
+									<img class="object-cover object-right md:object-center rounded-2xl w-full h-full"
+										src="./assets/img/kopdar/banyumas.jpg" alt>
 								</div>
 							</div>
 							<div class="flex items-center">
 								<div class="md:h-40 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-top rounded-2xl w-full h-full" src="./assets/img/kopdar/banyumas2.jpg" alt>
+									<img class="object-cover object-top rounded-2xl w-full h-full"
+										src="./assets/img/kopdar/banyumas2.jpg" alt>
 								</div>
 							</div>
 						</div>
@@ -374,13 +403,13 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:h-32 md:w-full w-[22rem] h-52 rounded-3xl">
+								<div class="bg-blue-600 md:h-32 md:w-64 w-[22rem] h-52 md:-translate-y-12 rounded-3xl">
 									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/bogor.jpg" alt>
 								</div>
 							</div>
 							<div class="flex items-center justify-center">
-								<div class="md:h-52 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/bogor2.jpg" alt>
+								<div class="bg-blue-600 md:h-52 md:w-52 w-[22rem] h-52 md:-translate-y-16 rounded-3xl">
+									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/depok.jpg" alt>
 								</div>
 							</div>
 						</div>
@@ -391,13 +420,13 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/depok.jpg" alt>
+								<div class="bg-blue-600 md:h-52 md:w-80 w-[22rem] h-52 md:translate-y-3 rounded-3xl">
+									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jogja.jpg" alt>
 								</div>
 							</div>
 							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-top rounded-2xl w-full h-full" src="./assets/img/kopdar/depok2.jpg" alt>
+								<div class="bg-blue-600 md:h-32 md:w-64 w-[22rem] h-52 rounded-3xl">
+									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jakpus.jpeg" alt>
 								</div>
 							</div>
 						</div>
@@ -408,12 +437,7 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:h-32 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jakpus.jpeg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-40 md:w-full w-[22rem] h-52 rounded-3xl">
+								<div class="bg-blue-600 md:h-32 md:w-64 w-[22rem] h-52 rounded-3xl">
 									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jakpus2.jpeg" alt>
 								</div>
 							</div>
@@ -425,8 +449,8 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:w-52 w-[22rem] md:h-full h-[26rem] rounded-3xl">
-									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/gorontalo.png" alt>
+								<div class="bg-blue-600 md:h-40 md:w-72 w-[22rem] h-52 rounded-3xl">
+									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/lampung.jpeg" alt>
 								</div>
 							</div>
 						</div>
@@ -438,30 +462,13 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:w-full w-[22rem] md:h-36 h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jabar.jpg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:w-full w-[22rem] md:h-36 h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jabar2.jpg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Tangerang Selatan</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-top rounded-2xl w-full h-full" src="./assets/img/kopdar/tangsel.jpeg" alt>
+								<div class="bg-blue-600 md:h-32 md:w-64 w-[22rem] h-52 md:-translate-y-12 rounded-3xl">
+									<img class="object-cover object-center rounded-2xl w-full h-full" src="./assets/img/kopdar/sulut.jpg" alt>
 								</div>
 							</div>
 							<div class="flex items-center justify-center">
-								<div class="md:h-52 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-bottom md:object-center rounded-2xl w-full h-full" src="./assets/img/kopdar/tangsel2.jpeg" alt>
+								<div class="bg-blue-600 md:h-52 md:w-52 w-[22rem] h-52 md:-translate-y-16 rounded-3xl">
+									<img class="object-cover object-bottom md:object-center rounded-2xl w-full h-full" src="./assets/img/kopdar/sumsel.jpeg" alt>
 								</div>
 							</div>
 						</div>
@@ -472,8 +479,8 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:h-36 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jatim.jpg" alt>
+								<div class="bg-blue-600 md:h-52 md:w-80 w-[22rem] h-52 md:translate-y-3 rounded-3xl">
+									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/tangsel2.jpeg" alt>
 								</div>
 							</div>
 							<div class="flex items-center justify-center">
@@ -489,13 +496,8 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:h-52 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/kalbar.jpg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-32 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/kalbar2.jpg" alt>
+								<div class="bg-blue-600 md:h-32 md:w-64 w-[22rem] h-52 rounded-3xl">
+									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jabar.jpg" alt>
 								</div>
 							</div>
 						</div>
@@ -506,13 +508,13 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/lampung.jpeg" alt>
+								<div class="bg-blue-600 md:h-32 md:w-64 w-[22rem] h-52 md:-translate-y-12 rounded-3xl">
+									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/kalbar.jpg" alt>
 								</div>
 							</div>
-							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/lampung.jpeg" alt>
+							<div class="flex items-center justify-center">
+								<div class="bg-blue-600 md:h-52 md:w-52 w-[22rem] h-52 md:-translate-y-16 rounded-3xl">
+									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/tangsel.jpeg" alt>
 								</div>
 							</div>
 						</div>
@@ -523,8 +525,8 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:w-52 w-[22rem] md:h-full h-[26rem] rounded-3xl">
-									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/maluku.jpg" alt>
+								<div class="bg-blue-600 md:h-52 md:w-80 w-[22rem] h-52 translate-y-3 rounded-3xl">
+									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/ntt.jpg" alt>
 								</div>
 							</div>
 						</div>
@@ -536,139 +538,8 @@
 						</div>
 						<div class="flex flex-col gap-10 pt-4">
 							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/ntt-ntb.jpg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/ntt-ntb.jpg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Maluku Utara</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:w-52 w-[22rem] md:h-full h-[26rem] rounded-3xl">
-									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/maluku-utara.jpeg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Semarang Raya</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/semarang-raya.jpg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/semarang-raya2.jpg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Solo Raya</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:h-36 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/soloraya.jpg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-56 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-center rounded-2xl w-full h-full" src="./assets/img/kopdar/soloraya2.jpg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Sulawesi Selatan</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:w-64 w-[22rem] md:h-full h-[28rem] rounded-3xl">
-									<img class="object-cover object-bottom rounded-2xl w-full h-full" src="./assets/img/kopdar/sulsel.jpg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Sulawesi Utara</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:h-36 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/sulut.jpg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-56 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover object-center rounded-2xl w-full h-full" src="./assets/img/kopdar/sulut2.jpg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Sumatera Selatan</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/sumsel.jpeg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-56 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-contain object-center rounded-2xl w-full h-full" src="./assets/img/kopdar/sumsel2.jpeg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Sumatera Utara</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:h-32 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/sumut.png" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-56 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/sumut2.jpeg" alt>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w-full text-center">
-							<span class="text-lg">Yogyakarta</span>
-						</div>
-						<div class="flex flex-col gap-10 pt-4">
-							<div class="flex items-center">
-								<div class="md:h-44 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jogja.jpg" alt>
-								</div>
-							</div>
-							<div class="flex items-center">
-								<div class="md:h-48 md:w-full w-[22rem] h-52 rounded-3xl">
-									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/jogja2.jpg" alt>
+								<div class="bg-blue-600 md:h-32 md:w-64 w-[22rem] h-52 rounded-3xl">
+									<img class="object-cover rounded-2xl w-full h-full" src="./assets/img/kopdar/semarang-raya.jpg" alt>
 								</div>
 							</div>
 						</div>
@@ -678,13 +549,14 @@
 				</div>
 			</div>
 
-			<img class="absolute bottom-10 -translate-x-1/4 w-1/3 md:w-1/5 left-0 z-20" src="./assets/maskot/laksya.png" alt>
+			<img class="absolute bottom-10 -translate-x-1/4 w-1/3 md:w-1/5 left-0 z-20" src="./assets/maskot/laksya.png"
+				alt>
 		</section>
 	</main>
 
 	<section id="booklet" class="pt-10 relative pb-40">
 		<div class="absolute h-full w-full -z-10">
-			<img class="absolute w-full z-50 bottom-0 brightness-50" src="./assets/img/seabad.png" alt="">
+			<img class="absolute w-full z-50 bottom-0 brightness-50" src="./assets/img/seabad.png" alt>
 			<img class="object-cover h-full bottom-0 w-full brightness-[.15]" src="./assets/img/deepsea.jpg" alt>
 		</div>
 		<div class=" h-full w-full">
@@ -693,7 +565,8 @@
 			</div>
 
 			<div class="">
-				<div id="df_manual_book" class="_df_book !bg-transparent" height="500" webgl="true" scrollWheel="false" source="assets/pdf/Selayang Pandang PK-237.pdf">
+				<div id="df_manual_book" class="_df_book !bg-transparent" height="500" webgl="true" scrollWheel="false"
+					source="assets/pdf/Selayang Pandang PK-237.pdf">
 				</div>
 				<div class="mt-10 text-white w-10/12 md:w-2/3 mx-auto text-center">
 					<p class="text-xs sm:text-sm md:text-xl">
@@ -709,7 +582,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<footer class="text-center p-4 bg-black text-slate-100">Copyright &copy Angkatan PK-237 LPDP</footer>
 
 	<script src="./assets/js/data.js"></script>
@@ -721,7 +594,7 @@
 		var hamburger = document.getElementById('hamburger-button');
 		var navbar = document.getElementById('navbar');
 
-		hamburger.addEventListener('click', function() {
+		hamburger.addEventListener('click', function () {
 			if (navbar.classList.contains('flex')) {
 				navbar.classList.remove('flex');
 				navbar.classList.add('hidden')
@@ -732,7 +605,7 @@
 		});
 
 
-		window.addEventListener('scroll', function() {
+		window.addEventListener('scroll', function () {
 			var header = document.getElementById('main-header');
 			if (window.scrollY > 0) {
 				header.classList.remove('absolute');
@@ -783,11 +656,11 @@
 			}
 		})
 
-		document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('DOMContentLoaded', function () {
 			const links = document.querySelectorAll('.crew-button');
 
 			links.forEach(link => {
-				link.addEventListener('click', function() {
+				link.addEventListener('click', function () {
 					// Hapus kelas aktif dari semua link
 					links.forEach(l => l.classList.remove('active'));
 
@@ -812,258 +685,194 @@
 			}
 		})
 
-		document.addEventListener("DOMContentLoaded", function() {
+		document.addEventListener("DOMContentLoaded", function () {
 			const buttons = document.querySelectorAll('.crew-button');
 
 			buttons.forEach(button => {
-			button.addEventListener('click', function() {
-				buttons.forEach(btn => btn.classList.remove('active', 'active-animation'));
-				this.classList.add('active', 'active-animation');
+				button.addEventListener('click', function () {
+					buttons.forEach(btn => btn.classList.remove('active', 'active-animation'));
+					this.classList.add('active', 'active-animation');
+				});
 			});
-			});
+		});
+	</script>
+
+	<script src="./assets/js/splashscreen.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			mirror: false,
+			once: true,
+			duration: 500,
 		});
 	</script>
 
 	<script src="https://code.highcharts.com/maps/highmaps.js"></script>
 	<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-	<script src="https://code.highcharts.com/modules/exporting.js"></script>
-	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-	<script src="./assets/js/splashscreen.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        mirror: false,
-        once: true,
-        duration: 500,
-      });
-    </script>
+
+
+
 	<script>
-			(async () => {
+		(async () => {
 
-				const topology = await fetch(
-					'https://code.highcharts.com/mapdata/countries/id/id-all.topo.json'
-				).then(response => response.json());
+			const topology = await fetch(
+				'https://code.highcharts.com/mapdata/countries/id/id-all.topo.json'
+			).then(response => response.json());
 
-				const data = [
-					['id-3700', 0], ['id-ac', 2], ['id-ba', 4], ['id-bt', 14], ['id-be', 1],
-					['id-yo', 24], ['id-jk', 33], ['id-go', 3], ['id-ja', 3], ['id-jr', 49],
-					['id-jt', 31], ['id-ji', 45], ['id-kb', 3], ['id-ks', 1], ['id-kt', 3],
-					['id-ki', 1], ['id-kr', 2], ['id-1024', 5], ['id-ma', 10], ['id-la', 2],
-					['id-nb', 2], ['id-nt', 9], ['id-pa', 7], ['id-ib', 2], ['id-ri', 4],
-					['id-sr', 1], ['id-se', 15], ['id-st', 1], ['id-sg', 2], ['id-sw', 3],
-					['id-sb', 6], ['id-sl', 7], ['id-su', 7]
-				];
+			const data = [
+				['id-3700', 0], ['id-ac', 2], ['id-ba', 4], ['id-bt', 14], ['id-be', 1],
+				['id-yo', 24], ['id-jk', 33], ['id-go', 3], ['id-ja', 3], ['id-jr', 49],
+				['id-jt', 31], ['id-ji', 45], ['id-kb', 3], ['id-ks', 1], ['id-kt', 3],
+				['id-ki', 1], ['id-kr', 2], ['id-1024', 5], ['id-ma', 10], ['id-la', 2],
+				['id-nb', 2], ['id-nt', 9], ['id-pa', 7], ['id-ib', 2], ['id-ri', 4],
+				['id-sr', 1], ['id-se', 15], ['id-st', 1], ['id-sg', 2], ['id-sw', 3],
+				['id-sb', 6], ['id-sl', 7], ['id-su', 7]
+			];
 
-				// Create the chart
-				Highcharts.mapChart('demografi', {
-					exporting: { enabled: false },
-					chart: {
-						map: topology,
-						backgroundColor: 'transparent'
-					},
-					credits: {
-						enabled: false
-					},
-					legend: {
-						enabled: false
-					},
-					title: {
-						text: ''
-					},
-					subtitle: {
-						text: ''
-					},
-					mapNavigation: {
-						enabled: true,
-						buttonOptions: {
-							verticalAlign: 'bottom'
-						}
-					},
-					colorAxis: {
-						min: 0,
-						max: 3,
-						stops: [
-							[0, '#FFFFFF'],
-							[1, '#F0A834'],
-							// [1, '#D17A00']
-						]
-					},
-					series: [{
-						data: data,
-						name: 'Domisili',
-						// states: {
-						// 	hover: {
-						// 		color: '#ffcf82'
-						// 	}
-						// },
-						dataLabels: {
-							enabled: true,
-							format: '{point.name}'
-						}
-					}]
-				});
-
-			})();
-
-
-
-		Highcharts.chart('gender', {
-			exporting: { enabled: false },
-			chart: {
-				type: 'pie',
-				backgroundColor: 'transparent',
-			},
-			credits: {
-				enabled: false
-			},
-			title: {
-				text: '',
-				style: {
-					color: 'white'
-				}
-			},
-			subtitle: {
-				text: '',
-			},
-
-			accessibility: {
-				announceNewData: {
-					enabled: true
+			// Create the chart
+			Highcharts.mapChart('demografi', {
+				exporting: { enabled: false },
+				chart: {
+					map: topology,
+					backgroundColor: 'transparent'
 				},
-				point: {
-					valueSuffix: ''
-				}
-			},
+				credits: {
+					enabled: false
+				},
+				legend: {
+					enabled: false
+				},
+				title: {
+					text: ''
+				},
+				subtitle: {
+					text: ''
+				},
+				mapNavigation: {
+					enabled: true,
+					buttonOptions: {
+						verticalAlign: 'bottom'
+					}
+				},
+				colorAxis: {
+					min: 0,
+					max: 3,
+					stops: [
+						[0, '#FFFFFF'],
+						[1, '#F0A834'],
+						// [1, '#D17A00']
+					]
+				},
+				series: [{
+					data: data,
+					name: 'Domisili',
+					// states: {
+					// 	hover: {
+					// 		color: '#ffcf82'
+					// 	}
+					// },
+					dataLabels: {
+						enabled: true,
+						format: '{point.name}'
+					}
+				}]
+			});
 
+		})();
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script>
+		var options = {
 			plotOptions: {
 				pie: {
-					borderColor: '#F0A834',
-					borderWidth: 0,
-					borderRadius: 10,
-				},
-				series: {
-					borderRadius: 0,
-					dataLabels: [{
-						enabled: true,
-						distance: '-30%',
-						style: {
-							fontSize: '0.9em',
-							textOutline: 'none'
-						}
-					}]
+					dataLabels: {
+						offset: -30,
+					},
 				}
 			},
-
-			tooltip: {
-				headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-				pointFormat: '{point.name}: {point.y}',
-			},
-
-			series: [
-				{
-					name: 'Gender',
-					colorByPoint: true,
-					data: [
-						{
-							name: 'Men',
-							y: 150,
-							color: '#30608F',
-						},
-						{
-							name: 'Woman',
-							y: 30,
-							color: '#F0A834',
-						},
-					]
-				}
-			],
-		});
-
-
-		Highcharts.chart('scholarship', {
-			exporting: { enabled: false },
+			series: [147, 156,],
 			chart: {
+				width: '100%',
+				height: '100%',
 				type: 'pie',
-				backgroundColor: 'transparent',
 			},
-			credits: {
-				enabled: false
+			colors: ['#4979a8', '#F0A834'],
+			stroke: {
+				show: true,
+				width: 0,
+				lineCap: 'round',
 			},
-			title: {
-				text: '',
-				style: {
-					color: 'white'
-				}
-			},
-			subtitle: {
-				text: '',
-			},
-
-			accessibility: {
-				announceNewData: {
-					enabled: true
+			dataLabels: {
+				enabled: true,
+				formatter: function (val, opts) {
+					return opts.w.globals.labels[opts.seriesIndex]; // Use label instead of value
 				},
-				point: {
-					valueSuffix: ''
+				style: {
+					fontSize: '16px',
+					colors: ['#fff'],
+					fontWeight: 'bold'
 				}
 			},
+			labels: ['Laki-Laki', 'Perempuan'],
+			legend: {
+				show: false,
+				labels: {
 
+					colors: ['#FFFFFF', '#FFFFFF']
+				},
+				fontWeight: 600,
+			}
+		};
+
+		var chart = new ApexCharts(document.querySelector("#gender"), options);
+		chart.render();
+	</script>
+	<script>
+		var options = {
 			plotOptions: {
 				pie: {
-					borderColor: '#F0A834',
-					borderWidth: 0,
-					borderRadius: 10,
+					dataLabels: {
+						offset: -30,
+					},
+				}
+			},
+			series: [189, 53, 46, 13, 2],
+			chart: {
+				width: '100%',
+				height: '100%',
+				type: 'pie',
+			},
+			colors: ['#30608F', '#fdd756', '#F0A834', '#38c6f3', '#369dd8'],
+			stroke: {
+				show: true,
+				width: 0,
+				lineCap: 'round',
+			},
+			dataLabels: {
+				enabled: true,
+				formatter: function (val, opts) {
+					return opts.w.globals.labels[opts.seriesIndex]; // Use label instead of value
 				},
-				series: {
-					borderRadius: 0,
-					dataLabels: [{
-						enabled: true,
-						distance: '-30%',
-						style: {
-							fontSize: '0.9em',
-							textOutline: 'none'
-						}
-					}]
+				style: {
+					fontSize: '14px',
+					colors: ['#fff'],
+					fontWeight: 'bold'
 				}
 			},
+			labels: ['Magister Dalam Negeri', 'Doktor Dalam Negeri', 'Magister Luar Negeri', 'Doktor Luar Negeri', 'Spesialis Dalam Negeri'],
+			legend: {
+				show: false,
+				labels: {
 
-			tooltip: {
-				headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-				pointFormat: '{point.name}: {point.y}',
-			},
+					colors: ['#FFFFFF', '#FFFFFF']
+				},
+				fontWeight: 600,
+			}
+		};
 
-			series: [
-				{
-					name: 'Scholarship',
-					colorByPoint: true,
-					data: [
-						{
-							name: 'Master <br>DN',
-							y: 121,	
-							color: '#38c6f3'
-						},
-						{
-							name: 'Doktor <br>DN',
-							y: 122,
-							color: '#30608F'
-						},
-						{
-							name: 'Doktor <br>LN',
-							y: 30,
-							color: '#fdd756',
-						},
-						{
-							name: 'Master <br>LN',
-							y: 29,
-							color: '#F0A834',
-						},
-					]
-				}
-			],
-		});
-
-
-
+		var chart = new ApexCharts(document.querySelector("#scholarship"), options);
+		chart.render();
 	</script>
 </body>
 
