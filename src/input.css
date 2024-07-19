@@ -3,86 +3,146 @@
 @tailwind utilities;
 
 @layer base {
-	html {
-		font-family: 'Montserrat', sans-serif;
-	}
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
 
-	h1,h2,h3 {
-		font-family: 'Roboto', sans-serif;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif;
+  }
 }
 
-.owl-theme .owl-nav [class*='owl-']:hover {
-	background: none;
+@layer components {
+  .glow {
+    text-shadow: 0px 0px 20px #ffffff;
+  }
+
+  .glow-sm {
+    text-shadow: 0px 0px 15px #ffffff;
+  }
 }
 
-.owl-prev, .owl-next {
-	@apply absolute top-1/2 -translate-y-1/2 text-white border-none cursor-pointer;
+/* Custom OwlCarousel */
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none;
 }
 
-.owl-prev button, .owl-next button {
-	@apply h-auto w-auto p-2;
+.owl-prev,
+.owl-next {
+  @apply absolute top-1/2 -translate-y-1/2 cursor-pointer border-none text-white;
 }
 
-.owl-prev span, .owl-next span {
-	@apply block  border-secondary-light h-4 w-4 lg:h-10 lg:w-10 text-white rotate-45 border-4 border-t-0 border-r-0 hover:scale-110 duration-150 hover:brightness-150;
+.owl-prev button,
+.owl-next button {
+  @apply h-auto w-auto p-2;
+}
+
+.owl-prev span,
+.owl-next span {
+  @apply block h-4 w-4 rotate-45 border-4 border-r-0 border-t-0 border-secondary-light text-white duration-150 hover:scale-110 hover:brightness-150 lg:h-10 lg:w-10;
 }
 
 .owl-next span {
-	@apply rotate-[225deg]
+  @apply rotate-[225deg];
 }
 
 .owl-prev {
-	@apply lg:-left-[200px] left-1 top-1/3;
+  @apply left-1 top-1/3 lg:-left-[200px];
 }
 .owl-next {
-	@apply lg:-right-[200px] right-1 top-1/3;
+  @apply right-1 top-1/3 lg:-right-[200px];
 }
+/* End Custom OwlCarousel */
 
-.glow {
-	text-shadow: 0px 0px 20px #FFFFFF;
-}
-
-.glow-sm {
-	text-shadow: 0px 0px 15px #FFFFFF;
-}
-
-#crew .item .flex div {
-	@apply gap-2 md:gap-4
-}
-
+/* Splachsreen */
 .bg-splashscreen.active {
-	@apply opacity-0
+  @apply opacity-0;
 }
 .splashscreen.active {
-	@apply blur
+  @apply blur;
 }
+/* End Splashscreen */
+
+/* Crew */
+#crew .item .flex div {
+	@apply gap-2 md:gap-4;
+  }
 
 .crew-button.active {
-	@apply font-bold relative text-primary-light;
+  @apply relative font-bold text-primary-light;
+}
+
+.crew-button.active::after {
+  @apply border-b-2 border-b-primary-light;
+  content: "";
+  width: 0;
+  transition: width 1s ease-in-out;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.crew-button.active.active-animation::after {
+  @apply left-1/2 w-1/3 -translate-x-1/2 md:w-full;
+}
+
+.crew-button.active.active-animation {
+  animation: activateAnimation 1s forwards;
+}
+
+@keyframes activateAnimation {
+  from {
+    width: 0;
   }
-  
-  .crew-button.active::after {
-	@apply border-b-2 border-b-primary-light;
-	content: '';
-	width: 0;
-	transition: width 1s ease-in-out;
-	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+  to {
+    width: 100%;
   }
-  
-  .crew-button.active.active-animation::after {
-	@apply md:w-full left-1/2 w-1/3 -translate-x-1/2
+}
+/* End Crew */
+
+/* Navbar */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  background-color: white;
+}
+/* End Navbar */
+
+/* Demographics */
+#gender,
+#scholarship {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+@media only screen and (max-width: 640px) {
+  #gender,
+  #scholarship {
+    position: relative;
+    width: 300px;
+    height: 300px;
   }
-  
-  /* Mengaktifkan animasi saat elemen menjadi aktif */
-  .crew-button.active.active-animation {
-	animation: activateAnimation 1s forwards;
-  }
-  
-  @keyframes activateAnimation {
-	from { width: 0; }
-	to { width: 100%; }
-  }
+}
+
+#gender::before,
+#scholarship::before {
+  content: "";
+  z-index: -10;
+  position: absolute;
+  z-index: 0;
+  top: -20px;
+  border-radius: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #f0a834;
+  background-color: white;
+}
+/* End Demographics */
