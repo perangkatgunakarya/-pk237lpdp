@@ -29,6 +29,25 @@
 
 	<!-- Aos Stylesheet-->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	<style>
+		#pause-btn,
+		#play-btn
+		{
+			transition: all .35s ease-in-out;
+		}
+
+		#btnSound.active #play-btn
+		{
+			transform: rotate( 90deg ) scale( 0 );
+			opacity: 0;
+		}
+
+		#btnSound:not( .active ) #pause-btn
+		{
+			transform: rotate( -90deg ) scale( 0 );
+			opacity: 0;
+		}
+	</style>
 </head>
 
 <body>
@@ -775,6 +794,11 @@
 			<div class="">
 				<div id="df_manual_book" class="_df_book !bg-transparent" data-aos="fade" height="500" webgl="true"
 					scrollWheel="false" source="assets/pdf/Selayang Pandang PK-237.pdf"></div>
+
+
+				<div class="flex justify-center mt-10">
+					<div id="player" class="w-11/12 h-72 md:w-1/2 md:h-96"></div>
+				</div>
 				<div class="mx-auto mt-10 w-10/12 text-center text-white md:w-2/3">
 					<p class="text-xs sm:text-sm md:text-xl" data-aos="fade-right">
 						Bound by dreams and destiny, LPDP awardees weave memories into a luminous legacy of wisdom. Each
@@ -786,6 +810,9 @@
 					</div>
 				</div>
 			</div>
+
+
+			
 		</div>
 	</section>
 
@@ -826,6 +853,33 @@
 		</div>
 	</footer>
 
+	<button id="btnSound" data-mdb-ripple="true" data-mdb-ripple-color="light" class="bottom-6 left-6 md:bottom-8 md:left-8 z-50 rounded-full bg-blue-400 p-4 text-xs font-medium uppercase leading-tight text-white shadow-md hover:bg-blue-500 hover:shadow-lg !block fixed">
+		<div id="pause-btn" class="relative">
+			<svg fill="#ffffff" class="h-4 w-4" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				viewBox="0 0 277.338 277.338" xml:space="preserve">
+			<g>
+				<path d="M14.22,45.665v186.013c0,25.223,16.711,45.66,37.327,45.66c20.618,0,37.339-20.438,37.339-45.66V45.665
+					c0-25.211-16.721-45.657-37.339-45.657C30.931,0,14.22,20.454,14.22,45.665z"/>
+				<path d="M225.78,0c-20.614,0-37.325,20.446-37.325,45.657V231.67c0,25.223,16.711,45.652,37.325,45.652s37.338-20.43,37.338-45.652
+					V45.665C263.109,20.454,246.394,0,225.78,0z"/>
+			</g>
+			</svg>
+		</div>
+
+		<div id="play-btn" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+			<svg class="h-4 w-4" fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+				viewBox="0 0 512 512" xml:space="preserve">
+			<g>
+				<g>
+					<path d="M500.203,236.907L30.869,2.24c-6.613-3.285-14.443-2.944-20.736,0.939C3.84,7.083,0,13.931,0,21.333v469.333
+						c0,7.403,3.84,14.251,10.133,18.155c3.413,2.112,7.296,3.179,11.2,3.179c3.264,0,6.528-0.747,9.536-2.24l469.333-234.667
+						C507.435,271.467,512,264.085,512,256S507.435,240.533,500.203,236.907z"/>
+				</g>
+			</g>
+			</svg>
+		</div>
+	</button>
+
 	<!-- Vendor Script -->
 	<script src="./assets/vendor/jquery/jquery.min.js"></script>
 	<script src="./assets/vendor/dflip/js/dflip.min.js" type="text/javascript"></script>
@@ -852,26 +906,7 @@
 	<script src="./assets/js/community.js"></script>
 	<script src="./assets/js/crew.js"></script>
 	<script src="./assets/js/splashscreen.js"></script>
-	<script>
-		 document.addEventListener('DOMContentLoaded', function() {
-			 const audio = document.getElementById('playAudio');
-					function playAudio() {
-							audio.play().then(() => {
-                    console.log('Audio started playing.');
-										document.removeEventListener('click', playAudio); // Remove event listener after first interaction
-										document.removeEventListener('mousemove', playAudio); // Remove event listener after first interaction
-                }).catch(error => {
-                    console.error('Failed to start audio:', error);
-                });
-
-					}
-					
-					// Add event listeners for the first user interaction
-					document.addEventListener('click', playAudio);
-					document.addEventListener('mousemove', playAudio);
-					playAudio()
-			});
-	</script>
+	<script src="./assets/js/playerAudioVideo.js"></script>
 </body>
 
 </html>
